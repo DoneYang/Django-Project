@@ -1,0 +1,21 @@
+{% extends 'layout/base.html' %} 
+{% load humanize %}
+{% load crispy_forms_tags %}
+{% block title %}Book Add{% endblock %}
+
+{% block content %} 
+<div class="row mb-5">
+    <div class="col-lg-6 offset-lg-3">
+
+        <form action="#" method="POST" enctype="multipart/form-data" novalidate>
+            {% csrf_token %}
+            <table>
+            {{ form|crispy}}
+            </table>
+            <button type="submit" class="btn btn-primary mt-4">Save Book</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
